@@ -1,7 +1,7 @@
-import {Component} from 'react'
+import React from 'react'
 import Cookies from 'js-cookie'
 
-class ProfileCard extends Component {
+class ProfileCard extends React.Component {
   state = {profile: {}, status: 'loading'}
 
   componentDidMount() {
@@ -27,13 +27,13 @@ class ProfileCard extends Component {
   render() {
     const {status, profile} = this.state
     if (status === 'loading') {
-      return <div data-testid='loader'>/* Loader JSX */</div>
+      return <div data-testid="loader">{/* Loader JSX */}</div>
     }
     return (
-      <div className='filter-section'>
-        <img src={profile.profile_image_url} alt='profile' />
-        <h1 className='profile-username'>{profile.name}</h1>
-        <p className='profile-bio'>{profile.short_bio}</p>
+      <div className="filter-section">
+        <img src={profile.profile_image_url} alt="profile" />
+        <h1 className="profile-username">{profile.name}</h1>
+        <p className="profile-bio">{profile.short_bio}</p>
       </div>
     )
   }

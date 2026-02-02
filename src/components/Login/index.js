@@ -93,7 +93,7 @@ class Login extends Component {
               className="input-container"
               onChange={this.onChangePassword}
             />
-            <button className="login-button" type="submit" role="button">
+            <button className="login-button" type="submit">
               Login
             </button>
             {showErrorMsg && <p className="error-message">*{errorMsg}</p>}

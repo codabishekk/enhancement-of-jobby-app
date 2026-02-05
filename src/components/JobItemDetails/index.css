@@ -4,126 +4,155 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: var(--bg-primary);
+  padding-bottom: 40px;
 }
 
 .item-details {
-  width: 80%;
-  max-width: 1500px;
-  background-color: #272727;
-  margin-top: 60px;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  width: 90%;
+  max-width: 1200px;
+  background-color: var(--bg-card);
+  margin-top: 40px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  animation: fadeIn 0.5s ease-out;
 }
 
 .website-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
 }
 
-.website {
-  font-size: 18px;
-  margin-right: 10px;
-}
 .website-link2 {
   text-decoration: none;
+  font-size: 16px;
+  color: var(--accent-color);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
 }
 
-.job-description1 {
-  color: #ffffff;
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 20px;
+.website-link2:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
 }
 
-.job-description2 {
-  color: #ffffff;
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 20px;
-  margin-top: 40px;
+/* Reusing classes from JobItemCard might be better, but ensuring consistency here */
+.job-description-header {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
 }
 
 .skill-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 20px;
-  justify-content: space-between;
+  margin-top: 32px;
+  gap: 24px;
   margin-bottom: 40px;
 }
 
 .skill-card {
   display: flex;
   align-items: center;
-  width: 300px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px; /* Adjust for responsiveness */
+  background-color: var(--bg-primary); /* Slightly darker card for skills */
+  padding: 16px;
+  border-radius: var(--radius-md);
+  transition: transform 0.2s;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+}
+
+.skill-card img {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
 }
 
 .job-description-text1 {
-  color: #ffffff;
-  font-family: 'Roboto';
+  color: var(--text-primary);
   font-weight: 500;
-  margin-left: 15px;
+  font-size: 16px;
+  margin: 0;
 }
+
+.life-at-company-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
 .job-description-text3 {
-  color: #ffffff;
-  width: 600px;
-  font-family: 'Roboto';
+  color: var(--text-secondary);
   font-weight: 400;
-  margin-left: 15px;
-  line-height: 2;
-  align-self: center;
-  font-size: 17px;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 24px;
 }
 
 .office {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .company-building {
-  width: 400px;
-}
-
-.similar-products-heading {
-  color: #ffffff;
-  font-family: 'Roboto';
-  font-size: 28px;
-  font-weight: 500;
-  margin: 0;
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
 }
 
 @media screen and (min-width: 768px) {
-  .similar-products-heading {
-    font-size: 32px;
-    margin-top: 40px;
-  }
-}
-
-.similar-products-list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-left: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .similar-products-list {
-    margin-top: 0px;
-    padding-top: 0px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .similar-products-list {
+  .office {
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .job-description-text3 {
+    margin-right: 32px;
+    margin-bottom: 0;
+    width: auto;
+    flex: 1;
+  }
+  
+  .skill-card {
+    width: calc(33.333% - 16px);
   }
 }
 
 .similar-container {
-  width: 80%;
-  max-width: 1500px;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 32px;
 }
+
+.similar-products-heading {
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.similar-products-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0;
+  list-style: none;
+}
+
+/* Similar Job Item styles should be in SimilarJobItem CSS but ensuring list layout here */

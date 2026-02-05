@@ -1,81 +1,111 @@
-.similar-product-item {
+.job-item-card2 {
+  background-color: var(--bg-card);
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
+  height: 100%;
 }
 
-@media screen and (min-width: 768px) {
-  .similar-product-item {
-    width: 200px;
-    margin-right: 64px;
-  }
+.job-item-card2:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: rgba(99, 102, 241, 0.3);
 }
 
-.similar-product-image {
-  width: 200px;
+.company-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.companyLogo {
+  width: 56px;
+  height: 56px;
+  margin-right: 16px;
   border-radius: 8px;
+  object-fit: contain;
 }
 
-.similar-product-title {
-  color: #171f46;
-  font-family: 'Roboto';
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.similar-products-brand {
-  color: #594d6d;
-  font-family: 'Roboto';
-  font-size: 16px;
-  margin-top: 6px;
-}
-
-.similar-product-price-rating-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
-}
-
-.similar-product-price {
-  color: #171f46;
-  font-family: 'Roboto';
+.company-title {
+  color: var(--text-primary);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
+  margin: 0 0 8px 0;
 }
 
-.similar-product-rating-container {
+.rating-container {
   display: flex;
   align-items: center;
-  background-color: #3b82f6;
-  border-radius: 6px;
-  padding-left: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-right: 8px;
 }
 
-.similar-product-rating {
-  color: #ffffff;
-  font-family: 'Roboto';
+.star {
+  color: #fbbf24;
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.rating {
+  color: var(--text-primary);
+  font-weight: 600;
   font-size: 14px;
-  font-weight: 500;
+  margin: 0;
+}
+
+.company-info {
+  margin-bottom: 16px;
+}
+
+.company-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.location, .type-icon {
+  color: var(--text-secondary);
+  width: 16px;
+  height: 16px;
   margin-right: 4px;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
-.similar-product-star {
-  height: 14px;
-  width: 14px;
+.place {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
 }
 
-.job-item-card2 {
-  max-width: 300px;
-  background-color: #272727;
-  margin-top: 60px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  padding: 20px;
+.salary {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.line1 {
+  width: 100%;
+  height: 1px;
+  background-color: var(--input-border);
+  border: none;
+  margin: 0 0 16px 0;
+}
+
+.job-description {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.job-description-text {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
 }

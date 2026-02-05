@@ -2,19 +2,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #272727;
-  padding: 10px 30px;
-  padding-top: 20px;
-  list-style-type: none;
+  background-color: var(--bg-card);
+  padding: 20px 40px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin-top:1px;
 }
 
 .header-logo {
-  height: 30px;
-  width: 100px;
+  height: 36px;
+  width: auto;
+  transition: opacity 0.2s;
+}
+
+.header-logo:hover {
+  opacity: 0.8;
 }
 
 .pages {
   display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .page-links {
@@ -22,19 +35,31 @@
 }
 
 .page-name {
-  color: #ffffff;
-  font-family: 'Roboto';
-  margin-right: 10px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.page-name:hover {
+  color: var(--accent-color);
 }
 
 .logout-btn {
-  background-color: #4f46e5;
-  color: white;
-  font-size: 12px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
   outline: none;
   border: none;
-  padding: 7px 15px;
-  border-radius: 4px;
+  padding: 8px 20px;
+  border-radius: var(--radius-md);
+  transition: all 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
 }
 
 .mobile-navbar {
@@ -42,14 +67,17 @@
 }
 
 .nav-bar-image {
-  width: 50px;
-  margin-left: 40px;
+  width: 28px;
+  height: 28px;
+  color: var(--text-primary);
 }
 
 .nav-mobile-btn {
   border: none;
   outline: none;
   background-color: transparent;
+  padding: 8px;
+  color: var(--text-primary);
 }
 
 @media screen and (max-width: 768px) {
@@ -58,15 +86,19 @@
   }
 
   .mobile-navbar {
-    background-color: #272727;
+    background-color: var(--bg-card);
     display: flex;
-    padding: 15px;
+    padding: 16px 20px;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
 
   .mobile-header-logo {
-    height: 70px;
-    width: 140px;
+    height: 32px;
+    width: auto;
   }
 }

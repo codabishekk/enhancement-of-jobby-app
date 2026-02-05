@@ -1,5 +1,6 @@
 import React from 'react'
 import Cookies from 'js-cookie'
+import './index.css'
 
 class ProfileCard extends React.Component {
   state = {profile: {}, status: 'loading'}

@@ -1,41 +1,77 @@
 .home-container {
-  background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.9) 30%, rgba(15, 23, 42, 0.4)), url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .home-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 50px;
-  min-height: 100vh;
-  width: 40%;
+  padding: 0 5%;
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-out;
 }
 
 .home-heading {
-  color: white;
-  font-family: 'Roboto';
-  font-size: 60px;
-  font-weight: bold;
+  color: var(--text-primary);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  max-width: 600px;
 }
 
 .home-description {
-  color: #ffffff;
-  font-size: 26px;
-  font-family: 'Roboto';
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 550px;
+  margin-bottom: 32px;
 }
 
 .home-button {
-  margin-top: 20px;
-  background-color: blue;
-  color: white;
-  font-family: 'Roboto';
-  padding: 15px 20px;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 14px 28px;
   outline: none;
   border: none;
   font-size: 16px;
-  font-weight: bold;
-  width: 150px;
-  border-radius: 10px;
+  font-weight: 600;
+  width: fit-content;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  transition: all 0.2s;
+}
+
+.home-button:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(99, 102, 241, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    background-image: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
+    padding: 20px;
+  }
+  
+  .home-intro {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .home-heading {
+    font-size: 40px;
+  }
+
+  .home-description {
+    font-size: 16px;
+  }
 }

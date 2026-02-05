@@ -68,7 +68,8 @@
   margin-bottom: 12px;
 }
 
-.location, .type-icon {
+.location,
+.type-icon {
   color: var(--text-secondary);
   width: 16px;
   height: 16px;

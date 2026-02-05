@@ -121,14 +121,14 @@
     justify-content: space-between;
     align-items: flex-start;
   }
-  
+
   .job-description-text3 {
     margin-right: 32px;
     margin-bottom: 0;
     width: auto;
     flex: 1;
   }
-  
+
   .skill-card {
     width: calc(33.333% - 16px);
   }

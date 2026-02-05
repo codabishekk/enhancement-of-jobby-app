@@ -71,14 +71,16 @@
   align-items: center;
 }
 
-.location, .type-icon {
+.location,
+.type-icon {
   color: var(--text-secondary);
   width: 18px;
   height: 18px;
   margin-right: 8px;
 }
 
-.place, .employment-type-label {
+.place,
+.employment-type-label {
   color: var(--text-secondary);
   font-size: 14px;
   margin: 0;

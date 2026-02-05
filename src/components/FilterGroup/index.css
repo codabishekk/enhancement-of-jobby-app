@@ -37,7 +37,8 @@
   margin-bottom: 12px;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
   cursor: pointer;
   accent-color: var(--accent-color);
   width: 16px;
